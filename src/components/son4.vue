@@ -12,25 +12,24 @@ export  default {
     }
   },
   props:{
-    sonInfo:{
-
-    },
     target: {
-
     }
   },
   created () {
 
   },
   mounted () {
-    this.targe(t => {
-      console.log(this.t)
-    })
+    // this.targe(t => {
+    //   console.log(this.t)
+    // })
   },
   computed: {
     
   },
   methods: {
+    chilDn (msg) {
+　　　alert(msg)
+　　},
     onClickMe (it) {
       this.$emit('child-tell',it,this.msg)
     }

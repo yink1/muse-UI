@@ -73,9 +73,9 @@ export default new Router({
     component: require('../components/parent')
   },
   {
-    path: '/showIn',
-    name: 'showIn',
-    component: require('../components/showIn')
+    path: '/showInLoading',
+    name: 'showInLoading',
+    component: require('../components/showInLoading')
   },
   {
     path: '/ewm',

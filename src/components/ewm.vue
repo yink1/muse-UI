@@ -1,5 +1,5 @@
-<template>
 <!-- 引入qrcode--------npm install qrcode -->
+<template>
 	<div>
 		<!-- <div id='code'></div> -->
 		<canvas id="canvas"></canvas>

@@ -25,3 +25,21 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+
+通过父组件
+<son4 @child-tell='listenTo' :target="passRef" ref='childRef'></son4>
+   mounted () {
+    this.$refs.childRef.date = ['wsxeeed','edcdddd','rfvffffd']
+  }
+   methods: {
+    refButton () {
+      this.$refs.childRef.chilDn('我是父元素传过来的')
+    }
+   }
+  1，可以修改 son4组件中的data里的date值
+  2，可以访问son4组件methods中的chilDn方法     this.$refs.childRef.chilDn ('我是父元素传过来的')
+  3, 可以操作DOM元素this.$refs.$el
+
