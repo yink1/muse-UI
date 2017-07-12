@@ -35,6 +35,7 @@ export  default {
 
   },
   mounted () {
+    this.$refs.childRef.$el.style.background = 'red';
     this.$refs.childRef.date = ['wsxeeed','edcdddd','rfvffffd']
   },
   computed: {
