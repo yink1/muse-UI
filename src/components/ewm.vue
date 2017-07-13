@@ -12,7 +12,8 @@ Vue.use(QRCode)
 export  default {	
   data () {
     return {
-      codes:''
+      codes:'',
+      url: 'http://www.baidu.com'
     }
   },
   created () {
@@ -28,7 +29,7 @@ export  default {
     useqrcode(){
 		var canvas = document.getElementById('canvas')
 
-		QRCode.toCanvas(canvas, 'http://www.baidu.com', function (error) {
+		QRCode.toCanvas(canvas, this.url, function (error) {
 		if (error) console.error(error)
 		console.log('success!');
 		})

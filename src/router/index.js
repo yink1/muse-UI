@@ -9,9 +9,11 @@ import viewm from '@/components/viewm'
 import viewn from '@/components/viewm'
 import parent from '@/components/parent'
 import ewm from '@/components/ewm'
+import map from '@/components/map'
 import QRCode from 'qrcode'
 Vue.use(Router)
 Vue.use(QRCode)
+
 export default new Router({
   mode: 'history',
   base: __dirname,
@@ -81,6 +83,11 @@ export default new Router({
     path: '/ewm',
     name: 'ewm',
     component: require('../components/ewm')
+  },
+  {
+    path: '/map',
+    name: 'map',
+    component: require('../components/map')
   }
   ]  
 })
