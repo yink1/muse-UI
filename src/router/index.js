@@ -10,6 +10,7 @@ import viewn from '@/components/viewm'
 import parent from '@/components/parent'
 import ewm from '@/components/ewm'
 import map from '@/components/map'
+import watchJson from '@/components/watchJson'
 import QRCode from 'qrcode'
 Vue.use(Router)
 Vue.use(QRCode)
@@ -83,6 +84,11 @@ export default new Router({
     path: '/ewm',
     name: 'ewm',
     component: require('../components/ewm')
+  },
+  {
+    path: '/watchJson',
+    name: 'watchJson',
+    component: require('../components/watchJson')
   },
   {
     path: '/map',

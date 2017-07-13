@@ -44,3 +44,8 @@ ref是挂载元素的基础上运行的
   2，可以访问son4组件methods中的chilDn方法     this.$refs.childRef.chilDn ('我是父元素传过来的')
   3, 可以操作DOM元素this.$refs.$el
 
+
+watchJson:
+通过watch监控 数组和对象属性发生变化
+new和old都是指向改变后的数据 即new == old（引用数据 存储的是地址 而非数据本身）
+通过this.Array[2] == '', 发现watch无法观测到数据发生变化
