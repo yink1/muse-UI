@@ -28,7 +28,8 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 
 
-
+ref是挂载元素的基础上运行的
+所以 按照 vue的生命周期 在created时是无效的
 通过父组件
 <son4 @child-tell='listenTo' :target="passRef" ref='childRef'></son4>
    mounted () {
