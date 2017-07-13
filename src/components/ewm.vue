@@ -3,6 +3,8 @@
 	<div>
 		<!-- <div id='code'></div> -->
 		<canvas id="canvas"></canvas>
+    <input type='range' min='0' max='100' :value="val">
+    {{val}}
 	</div>
 </template>
 <script>
@@ -12,12 +14,21 @@ Vue.use(QRCode)
 export  default {	
   data () {
     return {
+      val: 0,
       codes:'',
       url: 'http://www.baidu.com'
     }
   },
   created () {
 
+  },
+  beforeMount(){
+    var self = this;
+         setInterval(getTotelNumber,1000)
+         function getTotelNumber() {
+             self.val = Math.floor(Math.random()*100)
+         }
+         // getTotelNumber();
   },
   mounted () {
     this.useqrcode();
@@ -34,6 +45,9 @@ export  default {
 		console.log('success!');
 		})
 	}
+  },
+  watch:{
+
   }
 	}
 </script>
